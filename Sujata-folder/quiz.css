@@ -1,0 +1,234 @@
+  .container {
+      background: #E6E7E2;
+      align-items: center;
+      height: 800px;
+    justify-content: center;
+      font-family: Arial, sans-serif;
+      position:relative;
+     
+    }
+    .card{
+        position: absolute;
+background-color: #e8d5b7;
+   padding: 30px;
+   width: 600px;
+   height: 600px;
+   border: 3px solid #2d1f0e;
+   margin-left: 500px;
+  margin-top: 100px;
+    }
+
+   .card H2{
+        color:#2d1f0e;
+        margin-left: 80px;
+        margin-top: auto;
+    }
+    .box{
+        background-color: #F0E6DA;
+  border-radius: 16px;
+  padding: 24px;
+  width: 500px;
+  height:400px;
+   margin: 0 auto 20px auto;
+ box-shadow:#2d1f0e;
+  position: relative;
+     }
+    .options{
+   
+      display: flex;
+  flex-direction: column;
+  gap: 20px;
+    }
+    .option{
+       display: flex;
+  align-items: center;
+  gap: 12px;
+    background-color: #F7F2EC;
+      border: 2px solid transparent;
+      border-radius: 30px;
+      padding: 12px 12px;
+      width: 100%;
+      height: 45px;
+      text-align: left;
+      font-size: 15px;
+      margin-bottom: 10px;
+      cursor: pointer;
+      align-items: center;
+      color:#2d1f0e;
+     
+        }
+        .box h4{
+             margin: 0 0 6px 0;
+      color: gray;
+      font-size: 13px;
+        }
+       .box h3{
+        margin: 0 0 20px 0;
+      font-size: 20px;
+        }
+ .letter {
+      background-color: #e0d0bc;
+      border-radius: 50%;
+      width: 28px;
+      height: 25px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      font-size: 13px;
+      color: #5a4a38;
+    }
+
+    .option:hover {
+      background-color: #2d1f0e;
+      color:#E6E7E2;
+    }
+    .option.selected {
+  background-color: #2d1f0e;
+  color: #F7F2EC;
+}
+    .option .letter {
+      background-color: #4a3828;
+      color: white;
+    }
+   .timer{
+    background-color: #F7F2EC;
+    border-radius: 30px;
+    width:70px;
+    height:40px;
+
+    font-weight:bold;
+    font-size:16px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    align-self:flex-end;
+
+    margin-bottom:15px;
+
+    color:#2d1f0e;
+}
+
+    .logo img{
+        position: absolute;
+        width:150px;
+        height:150px;
+        margin: -90px;
+    }
+
+.mix{
+    display: flex;
+    flex-direction: column;
+}
+.skip{
+    font-weight: bold;
+    width:80px;
+    height:40px;
+    background-color: #e0d0bc;
+    border: 2px solid #E6E7E2;
+    color:#2d1f0e;
+    border-radius: 20%;
+   float:left;
+}
+.next{
+     font-weight: bold;
+    width:80px;
+    height:40px;
+    background-color: #e0d0bc;
+    border: 2px solid #E6E7E2;
+    color:#2d1f0e;
+    border-radius: 20%;
+   float:right;
+}
+
+
+
+@media (max-width: 768px) {
+
+    .container {
+        width: 100%;
+        height: auto;
+        min-height: 100vh;
+        padding: 20px 10px;
+    }
+
+    .card {
+        position: relative;
+        width: 100%;
+        height: auto;
+        margin: 20px auto;
+        padding: 20px 15px;
+    }
+
+    .card h2 {
+        margin: 0 0 20px 0;
+        text-align: center;
+        font-size: 24px;
+    }
+
+    .box {
+        width: 100%;
+        height: auto;
+        margin: 0 auto 20px auto;
+        padding: 18px 15px;
+    }
+
+    .box h4 {
+        font-size: 12px;
+    }
+
+    .box h3 {
+        font-size: 18px;
+        line-height: 1.4;
+    }
+
+    .options {
+        gap: 10px;
+    }
+
+    .option {
+        width: 100%;
+        height: auto;
+        min-height: 45px;
+        padding: 10px;
+        font-size: 14px;
+        margin-bottom: 8px;
+    }
+
+    .letter {
+        width: 27px;
+        height: 27px;
+        min-width: 27px;
+    }
+
+    .timer {
+        width: 65px;
+        height: 38px;
+        font-size: 14px;
+    }
+
+    
+
+    .mix {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 10px;
+    }
+
+    .skip,
+    .next {
+        float: none;
+        width: 75px;
+        height: 38px;
+        margin: 0;
+        flex-shrink: 0;
+        font-size: 13px;
+        border-radius: 15px;
+    }
+
+}
