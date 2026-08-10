@@ -1,0 +1,259 @@
+body{
+
+    background:#E6E7E2;
+
+}
+
+.container{
+
+    width:700px;
+    margin:auto;
+    margin-top:40px;
+    background:#e8d5b7;
+    border:3px solid #2d1f0e;
+    border-radius:15px;
+    padding:20px;
+
+}
+
+h2{
+
+    color:#2d1f0e;
+    margin-bottom:20px;
+
+}
+
+.box{
+
+    background:#F0E6DA;
+    border:2px solid #e0d0bc;
+    border-radius:10px;
+    padding:15px;
+    margin-bottom:20px;
+
+}
+
+.option{
+
+    background:#F7F2EC;
+    border:1px solid #2d1f0e;
+    border-radius:8px;
+    padding:8px;
+    margin-top:8px;
+
+}
+
+.correct{
+
+    background:lightgreen;
+    border-radius:8px;
+
+}
+
+.wrong{
+
+    background:lightcoral;
+    border-radius:8px;
+
+}
+
+.skip{
+
+    background:lightgray;
+    border-radius:8px;
+
+}
+
+.time{
+
+    margin-top:10px;
+    color:#2d1f0e;
+
+}
+
+.back{
+
+    width:80px;
+    height:35px;
+    background:#e0d0bc;
+    border:2px solid #2d1f0e;
+    border-radius:8px;
+    cursor:pointer;
+
+}
+
+.back:hover{
+
+    background:#2d1f0e;
+    color:white;
+
+}
+nav{
+    background:#2b1f14;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 40px;
+}
+
+.logo{
+    color:white;
+    font-size:30px;
+    font-weight:bold;
+}
+
+.logo span{
+    color:#6FA8C4;
+}
+
+.nav-right{
+    display:flex;
+    align-items:center;
+    gap:20px;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:10px;
+}
+
+nav ul li a{
+    text-decoration:none;
+    color:#d9c5a8;
+    padding:10px 20px;
+    border-radius:25px;
+    transition:.3s;
+}
+
+nav ul li a:hover{
+    background:white;
+    color:#2b1f14;
+}
+
+nav ul li a.active{
+    background:#ead3b0;
+    color:#2b1f14;
+    font-weight:bold;
+}
+
+.btn{
+    text-decoration:none;
+    background:#ead3b0;
+    color:#2b1f14;
+    padding:10px 22px;
+    border-radius:25px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.btn:hover{
+    background:white;
+}
+
+.btn.active{
+    background:#ead3b0;
+}
+
+/* 
+   RESPONSIVE
+ */
+
+@media (max-width: 700px) {
+
+    body {
+        width: 100%;
+    }
+
+    
+
+    nav {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px 20px;
+        text-align: center;
+    }
+
+    .logo {
+        font-size: 26px;
+    }
+
+    .nav-right {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    nav ul {
+        padding: 0;
+        gap: 5px;
+    }
+
+    nav ul li a {
+        padding: 8px 12px;
+        font-size: 14px;
+    }
+
+    .btn {
+        padding: 9px 18px;
+        font-size: 14px;
+    }
+
+
+   
+
+    .container {
+        width: 92%;
+        margin: 25px auto;
+        padding: 15px;
+        border-width: 2px;
+    }
+
+
+   
+
+    h2 {
+        font-size: 22px;
+        margin-bottom: 15px;
+    }
+
+
+    
+
+    .box {
+        padding: 12px;
+        margin-bottom: 15px;
+    }
+
+
+   
+    .option {
+        padding: 10px;
+        font-size: 14px;
+        word-wrap: break-word;
+    }
+
+
+    
+
+    .correct,
+    .wrong,
+    .skip {
+        padding: 10px;
+    }
+
+
+  
+
+    .time {
+        font-size: 14px;
+    }
+
+
+
+    .back {
+        width: 90px;
+        height: 38px;
+        font-size: 14px;
+    }
+
+}
