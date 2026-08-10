@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MatchMind · customize quiz</title>
+  <link rel="stylesheet" href="category.css">
+</head>
+<body>
+
+  <nav>
+    <div class="logo">
+      Match<span>Mind</span>
+    </div>
+
+    <div class="nav-right">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+
+      <a href="home.html" class="btn active">Play Now</a>
+    </div>
+  </nav>
+
+  <div class="quiz-card" id="categoryPage">
+    <div class="brand">
+      <h1>MatchMind</h1>
+      <span class="match-dot"></span>
+    </div>
+    
+    <div class="subhead">
+      <span>Customize Your Quiz</span>
+      <span>pick &amp; play</span>
+      <span class="hint">⏺ click any option</span>
+    </div>
+
+    <p id="welcomeText" style="font-size: 0.95rem; color: #3e5a7c; margin-top: -0.1rem; margin-bottom: 1.6rem; font-weight: 400; letter-spacing: -0.2px;">
+      Choose category, difficulty &amp; number of questions
+    </p>
+
+    <div class="customize-section">
+      <div class="option-group">
+        <div class="option-label">Category</div>
+        <div class="option-pills" data-group="category" data-target="categorySelect">
+          <span class="pill selected" data-value="any">All Categories</span>
+          <span class="pill" data-value="9">General Knowledge</span>
+          <span class="pill" data-value="17">Science &amp; Nature</span>
+          <span class="pill" data-value="18">Computers</span>
+          <span class="pill" data-value="19">Mathematics</span>
+          <span class="pill" data-value="21">Sports</span>
+        </div>
+      </div>
+
+      <div class="option-group">
+        <div class="option-label">Difficulty</div>
+        <div class="option-pills" data-group="difficulty" data-target="difficultySelect">
+          <span class="pill selected" data-value="easy">Easy</span>
+          <span class="pill" data-value="medium">Medium</span>
+          <span class="pill" data-value="hard">Hard</span>
+        </div>
+      </div>
+
+      <div class="option-group">
+        <div class="option-label">Numbers of questions</div>
+        <div class="option-pills" data-group="number" data-target="amountSelect">
+          <span class="pill pill-number" data-value="5">5</span>
+          <span class="pill pill-number selected" data-value="10">10</span>
+          <span class="pill pill-number" data-value="15">15</span>
+          <span class="pill pill-number" data-value="20">20</span>
+        </div>
+      </div>
+        <div class="option-group">
+  <div class="option-label">Question Source</div>
+
+  <div class="option-pills" data-group="source" data-target="sourceSelect">
+    <span class="pill selected" data-value="api">API Questions</span>
+    <span class="pill" data-value="manual">Manual Questions</span>
+  </div>
+</div>
+      <select id="categorySelect" style="display:none;">
+        <option value="any" selected>All Categories</option>
+        <option value="9">General Knowledge</option>
+        <option value="17">Science &amp; Nature</option>
+        <option value="18">Computers</option>
+        <option value="19">Mathematics</option>
+        <option value="21">Sports</option>
+      </select>
+      
+      <select id="difficultySelect" style="display:none;">
+        <option value="easy" selected>Easy</option>
+        <option value="medium">Medium</option>
+        <option value="hard">Hard</option>
+      </select>
+
+      <select id="amountSelect" style="display:none;">
+        <option value="5">5</option>
+        <option value="10" selected>10</option>
+        <option value="15">15</option>
+        <option value="20">20</option>
+      </select>
+      <select id="sourceSelect" style="display:none;">
+  <option value="api" selected>API Questions</option>
+  <option value="manual">Manual Questions</option>
+</select>
+      <div class="start-wrapper">
+        <button class="btn-start" onclick="beginQuizClicked()">
+          Start Quiz <span class="arrow">→</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    (function() {
+      const groups = document.querySelectorAll('.option-pills');
+
+      groups.forEach(group => {
+        const pills = group.querySelectorAll('.pill');
+        const targetSelect = document.getElementById(group.dataset.target);
+
+        pills.forEach(pill => {
+          pill.addEventListener('click', function(e) {
+            e.stopPropagation();
+
+            pills.forEach(p => p.classList.remove('selected'));
+            this.classList.add('selected');
+
+            targetSelect.value = this.dataset.value;
+          });
+        });
+      });
+    })();
+  </script>
+
+  <script src="category.js"></script>
+</body>
+</html>
